@@ -132,7 +132,7 @@ namespace Slackord
                         var oldDateTime = (double)rawTimeDate;
                         var convertDateTime = ConvertFromUnixTimestampToHumanReadableTime(oldDateTime).ToString("g");
                         var newDateTime = convertDateTime.ToString();
-                        var slackUserName = pair["user_profile"]["display_name"].ToString();
+                        var slackUserName = pair["user_profile"]["name"].ToString();
                         var slackRealName = pair["user_profile"]["real_name"];
 
                         string slackMessage;
@@ -402,7 +402,7 @@ namespace Slackord
                         var oldDateTime = (double)rawTimeDate;
                         var convertDateTime = ConvertFromUnixTimestampToHumanReadableTime(oldDateTime).ToString("g");
                         var newDateTime = convertDateTime.ToString();
-                        var slackUserName = pair["user_profile"]["display_name"].ToString();
+                        var slackUserName = pair["user_profile"]["name"].ToString();
                         var slackRealName = pair["user_profile"]["real_name"];
                         var slackMessage = pair["text"] + "\n";
 
